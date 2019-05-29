@@ -1,0 +1,52 @@
+{{ include('admin/header.twig') }}
+                  <div class="user-content" style="padding-bottom: 50px !important ">
+                    <div class="user-panel">
+                      <div class="row">
+                        <div class="col-md-8">
+                          <h4>Add New Patients</h4>
+                          <a href="users" class="btn btn-small btn-primary"><em class="ti ti-back-left"></em>Back to Patients List</a>
+                          <br /><br />
+                          <form id="userReg" >
+                            <div id="form-results"></div>
+                              <div class="field-item">
+                                  <div class="field-wrap">
+                                    <label>Patient Name</label>
+                                      <input type="text" id="name" name="name" class="input-bordered input-text-area" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="field-item">
+                                    <div class="field-wrap">
+                                      <label>Patient Email</label>
+                                        <input type="email" id="email" name="email" class="input-bordered input-text-area" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="field-item">
+                                    <div class="field-wrap">
+                                      <label>Gender</label>
+                                        <select id="gender" name="gender" class="form-control">
+                                          <option>Select One</option>
+                                          <option value="male">Male</option>
+                                          <option value="female">Female</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="field-item">
+                                    <div class="field-wrap">
+                                      <label>Year of Birth</label>
+                                        <input id="yob" name="yob" type="year" class="input-bordered" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="field-item">
+                                  <div class="field-wrap">
+                                    <br>
+                                    <button class="btn btn-primary btn-md" type="submit" >Submit</button>
+                                  </div>
+                                </div>
+                            </form>
+
+                      </div>
+                      </div><!-- .row -->
+                    </div><!-- .user-panel -->
+                  </div><!-- .user-content -->
+{{ include('admin/footer.twig') }}
