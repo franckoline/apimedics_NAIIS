@@ -108,6 +108,40 @@
         return false; 
     }
 
+ function validForm(id){
+        var uri = ($('#va'+id).attr('href'));
+        console.log("url", uri);
+        params = getUrlVars(uri);
+        var issue_id = params["issue_id"];
+        var pat_id = params["pat_id"];
+        var issue_name = params["issueName"];
+        var icd_name = params["icdName"];
+        var prof_name = params["profName"];
+        var symptom_id = params["symptom_id"];
+        var result = "valid";
+        data = {'issue_id':issue_id, 'pat_id':pat_id, 'issue_name':issue_name, 'icd_name': icd_name, 'prof_name':prof_name,'symptom_id':symptom_id, 'result':result };
+        var submitUrl = "http://localhost/apimedic/admin/form/add-report";
+        console.log("baseurl", submitUrl);
+
+      $.ajax({
+         url:submitUrl,
+         type:"post",
+         data: data, //this is formData
+         // processData:false,
+         // contentType:false,
+         // cache:false,
+         async:false,
+         success: function(data){
+         if (data == "success") {$('#result-results').html('<p class="alert alert-success"> Report Added</p>');}
+             else{
+            $('#result-results').html('<p class="alert alert-danger">' + data + '</p>');
+             }
+         }
+       });
+        
+        return false; 
+    }
+
     function getURLParameter(url, name) {
     return (RegExp(name + '=' + '(.+?)(&|$)').exec(url)||[,null])[1];
     }

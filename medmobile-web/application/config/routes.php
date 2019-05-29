@@ -18,6 +18,8 @@ $route['admin/diagnose/(:any)'] = 'index/diagnose';
 
 //API
 $route['api/v1/results'] = 'api/results';
+$route['api/v1/results/valid'] = 'api/valid_results';
+$route['api/v1/results/invalid'] = 'api/invalid_results';
 $route['api/v1/zones/zone/(:any)'] = 'api/zone_detail';
 
 

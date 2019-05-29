@@ -25,20 +25,20 @@ class Admin_model extends CI_Model {
     }
   }
 
-   public function list_symptoms() {
+  public function list_symptoms() {
 
-    # Form our options
-    $opts = array('http' =>
-        array(
-            'method'  => 'POST',
-            'header'  => 'Content-type: application/x-www-form-urlencoded',
-            'content' => $postString
-        )
-    );
-    # Create the context
-    $context = stream_context_create($opts);
-    # Get the response (you can use this for GET)
-    $result = file_get_contents('/api/update', false, $context);
+    // # Form our options
+    // $opts = array('http' =>
+    //     array(
+    //         'method'  => 'POST',
+    //         'header'  => 'Content-type: application/x-www-form-urlencoded',
+    //         'content' => $postString
+    //     )
+    // );
+    // # Create the context
+    // $context = stream_context_create($opts);
+    // # Get the response (you can use this for GET)
+    // $result = file_get_contents('/api/update', false, $context);
 
 
         echo "<script> 
@@ -81,7 +81,7 @@ class Admin_model extends CI_Model {
         }
         }); 
       </script>";
-      }
+  }
 
 
   public function list_users() {
@@ -106,21 +106,6 @@ class Admin_model extends CI_Model {
       }
   }
 
-  public function pardoned_inmates() {
-
-    $query = $this->db->get('pardons')->num_rows();
-
-      if($query) {
-        return $query;
-      } else {
-        return false;
-      }
-  }
-
-  public function update_announcement() {
-    $annoucement = $this->input->post('announcement', true);
-    return $this->db->query("UPDATE annoucement SET message='$annoucement' WHERE id='1'");
-  }
 
 
 }
