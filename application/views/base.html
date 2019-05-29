@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Shopily">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fav Icon  -->
+    <!-- Site Title  -->
+    {% block title %}
+    <title>{{ title }}</title>
+    {% endblock %}
+
+    <!-- Vendor Bundle CSS -->
+    <link rel="stylesheet" href="{{ base_url() }}static-content/user/css/vendor.bundle.css?ver=101">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{ base_url() }}static-content/user/css/style.css?ver=101">
+    
+</head>
+
+<body class="user-dashboard">
+    
+    
+    <div class="topbar">
+        <div class="topbar-md d-lg-none">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a href="#" class="toggle-nav">
+                        <div class="toggle-icon">
+                            <span class="toggle-line"></span>
+                            <span class="toggle-line"></span>
+                            <span class="toggle-line"></span>
+                            <span class="toggle-line"></span>
+                        </div>
+                    </a><!-- .toggle-nav -->
+
+                    <div class="site-logo">
+                        <a href="{{ base_url() }}" class="site-brand">
+                            {{ site_name }}
+                        </a>
+                    </div><!-- .site-logo -->
+                    
+                    <div class="dropdown topbar-action-item topbar-action-user">
+                        <a href="#" data-toggle="dropdown"> <img class="icon" src="{{ base_url() }}static-content/user/images/user-thumb-sm.png" alt="thumb"> </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="user-dropdown">
+                                <div class="user-dropdown-head">
+                                    <h6 class="user-dropdown-name">Admin</h6>
+                                </div>
+                                <ul class="user-dropdown-links">
+                                    <li><a href="logout"><i class="ti ti-power-off"></i>Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .toggle-action -->
+                </div><!-- .container -->
+            </div><!-- .container -->
+        </div><!-- .topbar-md -->
+        <div class="container">
+            <div class="d-lg-flex align-items-center justify-content-between">
+                <div class="topbar-lg d-none d-lg-block">
+                    <div class="site-logo">
+                        <a href="{{ base_url() }}" class="site-brand">
+                           <h1> {{ site_name }} </h1>
+                        </a>
+                    </div><!-- .site-logo -->
+                </div><!-- .topbar-lg -->
+
+                <div class="topbar-action d-none d-lg-block">
+                    <ul class="topbar-action-list">
+                        <li class="topbar-action-item topbar-action-link">
+                            <a href="{{ base_url() }}"><em class="ti ti-power-off"></em> Logout</a>
+                        </li><!-- .topbar-action-item -->
+                    </ul><!-- .topbar-action-list -->
+                </div><!-- .topbar-action -->
+            </div><!-- .d-flex -->
+        </div><!-- .container -->
+    </div>
+    <!-- TopBar End -->
+    
+    
+    <div class="user-wraper">
+        <div class="container">
+            <div class="d-flex">
+                <div class="user-sidebar">
+                    <div class="user-sidebar-overlay"></div>
+                    <div class="user-box d-none d-lg-block">
+                        <div class="user-image">
+                            <img src="{{ base_url() }}static-content/user/images/user-thumb-lg.png" alt="thumb">
+                        </div>
+                        <h6 class="user-name">Admin</h6>
+                    </div><!-- .user-box -->
+                    <ul class="user-icon-nav">
+                        <li><a href="{{ base_url() }}"><em class="ti ti-dashboard"></em>Dashboard</a></li>
+                        <li><a href="{{ base_url() }}admin/users"><em class="ti ti-user"></em>Manage patients  </a></li>
+                        <li><a href="{{ base_url() }}admin/inmates"><em class="ti ti-files"></em>Sympotms Checker  </a></li>
+
+                        <li><a href="{{ base_url() }}admin/inmates-behaviour"><em class="ti ti-pie-chart"></em>Diagnosis Manager  </a></li>
+
+<!--                         <li><a href="{{ base_url() }}admin/zones"><em class="ti ti-infinite"></em>Reformation Centers</a></li>
+ -->                        <li><a href="logout"><em class="ti ti-power-off"></em>Logout</a></li>
+                    </ul><!-- .user-icon-nav -->
+                    <div class="user-sidebar-sap"></div><!-- .user-sidebar-sap -->
+                   
+                   
+                </div><!-- .user-sidebar -->

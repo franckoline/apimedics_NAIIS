@@ -1,0 +1,44 @@
+{{ include('admin/header.twig') }}
+                   <div class="user-content">
+                      <div class="user-panel">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h4> Diagnose {{ user.name }} </h4>
+                             <a href="{{ base_url() }}admin/users" class="btn btn-sm btn-primary"><em class="ti ti-back-left"></em>Back to Patients List</a>
+                            <br /><br />
+                            
+                              <form id="checkDiagnose">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="field-item">
+                                          <div class="field-wrap">
+                                            <label>Symptoms ID</label>
+                                              <input type="text" class="input-bordered" placeholder="Enter Symptom ID" id="symptoms" name="symptoms">
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="field-item">
+                                        <label><p>&nbsp;<br /><br /><br /></p></label>
+                                        <input type="hidden" value="{{ tokenId }} " id="token" name="token" >
+                                        <input type="hidden" value="en-gb" id="language" name="language" >
+                                        <input type="hidden" value="{{ user.gender }} " id="gender" name="gender" >
+                                        <input type="hidden" value="{{ user.yob }}" id="year_of_birth" name="year_of_birth"  >  
+                                        <input type="hidden" value="{{ user.id }}" id="patientID" name="patientID"  >  
+                                      <button class="btn btn-primary btn-sm" type="submit">Diagnose</button>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12"  >
+                                     <div id="form-results"  ></div>
+                                   </div>
+                                </div><!-- .row -->
+                              </form>
+                       
+          
+                    </div><!-- .user-panel -->
+                </div><!-- .user-content -->
+            </div><!-- .d-flex -->
+        </div><!-- .container -->
+    </div>
+    <!-- UserWraper End -->
+{{ include('admin/footer.twig') }}
